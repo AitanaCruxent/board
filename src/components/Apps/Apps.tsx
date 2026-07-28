@@ -1,18 +1,28 @@
+import "./Apps.css"
+
 function Apps() {
     return (
         <section className="apps-section">
 
-            <button className="app-icon">
-                <i className="bi bi-person-circle"></i>
-                
-            </button>
-
-            <div className="app journey">
-                
+            <div className="app-icon">
+                <button className="profile">
+                    <i className="bi bi-person-circle"></i>
+                </button>
+                <span>Profile</span>
             </div>
 
-            <div className="app library">
-                
+            <div className="app-icon">
+                <button className="journey">
+                    <i className="bi bi-backpack"></i>
+                </button>
+                <span>Journey</span>
+            </div>
+
+            <div className="app-icon">
+                <button className="tools">
+                    <i className="bi bi-tools"></i>
+                </button>
+                <span>ToolKit</span>
             </div>
 
             <div className="contact">
