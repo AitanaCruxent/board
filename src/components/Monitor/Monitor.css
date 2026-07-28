@@ -39,15 +39,18 @@
   background: #414141;
 }
 
-.welcome-screen {
+.home-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.welcome-screen p,
-.welcome-screen h2 {
+.home-header h2 {
   color: white;
+  padding: 7px;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.274);
+  border-radius: 10px;
 }
 

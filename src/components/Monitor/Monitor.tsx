@@ -1,16 +1,19 @@
 import './Monitor.css'
 import Clock from "../Clock/Clock"
+import Apps from "../Apps/Apps"
 
 function Monitor() {
   return (
     <div className="monitor">
       <div className="monitor__screen">
-        <div className="welcome-screen">
-          <Clock />
-          <p>Welcome!</p>
-          <h2>Welcome!</h2>
-          <button type="button" className="btn btn-outline-light btn-lg">Click to start!</button>
-        </div>
+          <header className="home-header">
+            <h2>Exploring the intersection of code, mathematics and design.</h2>
+            <Clock />
+          </header>
+
+          <main className="home-screen">
+             <Apps />
+          </main>
       </div>
 
       <div className="monitor__stand" />
