@@ -6,6 +6,12 @@
     border-radius: 10px;
 }
 
+.extra-apps-section {
+    padding: 20px;
+    display: flex;
+    gap: 12px;
+}
+
 .app-icon{
     display: flex;
     flex-direction: column;
@@ -58,6 +64,14 @@
 
 .contact {
     background-color: rgb(223, 223, 77);
+}
+
+.minigame {
+    background-color: rgb(219, 90, 187);
+}
+
+.lab {
+    background-color: rgb(231, 139, 53);
 }
 
 

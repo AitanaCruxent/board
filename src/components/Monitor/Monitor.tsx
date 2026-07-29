@@ -1,6 +1,7 @@
 import './Monitor.css'
 import Clock from "../Clock/Clock"
 import Apps from "../Apps/Apps"
+import ExtraApps from "../Apps/ExtraApps"
 
 function Monitor() {
   return (
@@ -13,6 +14,26 @@ function Monitor() {
           <main className="home-screen">
             <Clock />
             <Apps />
+
+            <div className="search-container">
+              <ExtraApps />
+              <form
+                className="search-bar"
+                action="https://www.google.com/search"
+                method="get"
+                target="_blank"
+              >
+                <i className="bi bi-search"></i>
+
+                <input
+                  type="search"
+                  name="q"
+                  placeholder="Search Google..."
+                  aria-label="Search Google"
+                />
+              </form>
+
+            </div>
           </main>
 
           <nav className="taskbar">
