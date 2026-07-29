@@ -25,8 +25,18 @@ function Apps() {
                 <span>ToolKit</span>
             </div>
 
-            <div className="contact">
-                
+            <div className="app-icon">
+                <button className="projects">
+                    <i className="bi bi-journal-code"></i>
+                </button>
+                <span>Projects</span>
+            </div>
+
+            <div className="app-icon">
+                <button className="contact">
+                    <i className="bi bi-phone"></i>
+                </button>
+                <span>Contact</span>
             </div>
 
 

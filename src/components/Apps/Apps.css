@@ -1,7 +1,7 @@
 .apps-section {
     padding: 20px;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     background-color: rgba(0, 0, 0, 0.123);
     border-radius: 10px;
 }
@@ -50,6 +50,14 @@
 
 .tools {
     background-color: rgb(94, 207, 90);
+}
+
+.projects {
+    background-color: rgb(172, 56, 172);
+}
+
+.contact {
+    background-color: rgb(223, 223, 77);
 }
 
 

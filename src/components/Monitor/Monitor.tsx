@@ -8,12 +8,26 @@ function Monitor() {
       <div className="monitor__screen">
           <header className="home-header">
             <h2>Exploring the intersection of code, mathematics and design.</h2>
-            <Clock />
           </header>
 
           <main className="home-screen">
-             <Apps />
+            <Clock />
+            <Apps />
           </main>
+
+          <nav className="taskbar">
+            <div className="icon">
+              <i className="bi bi-house-door-fill"></i>
+            </div>
+
+            <div className="icon">
+              <i className="bi bi-pencil-fill"></i>
+            </div>
+
+            <div className="icon">
+              <i className="bi bi-dice-1-fill"></i>
+            </div>
+          </nav>
       </div>
 
       <div className="monitor__stand" />
