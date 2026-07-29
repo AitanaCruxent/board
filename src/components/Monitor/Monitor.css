@@ -12,6 +12,7 @@
 .monitor__screen {
   width: 100%;
   flex: 1;
+  min-height: 0;
 
   border: 8px solid #414141;
   border-bottom-width: 16px;
@@ -57,25 +58,55 @@
   font-size: 20px;
 }
 
+@media (max-height: 530px) {
+  .home-header h2{
+    font-size: 15px;
+    width: 30%;
+  }
+}
+
 .home-screen {
   width: 100%;
   height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  padding: 60px 20px 60px;
+}
+
+.home-screen > * {
+  flex-shrink: 0;
+}
+
+@media (max-height: 530px) {
+  .home-screen {
+    justify-content: flex-start;
+  }
 }
 
 .search-container{
   display: flex;
   align-items: center;
+  gap:10px;
+
+  flex-shrink: 0;
 }
 
+
+
 .search-bar {
-  width: min(420px, 70%);
-  margin-top: 24px;
+  width: min(400px, 60%);
+  margin-top: 0px;
   padding: 10px 16px;
+  transform: translateX(-20px);
 
   display: flex;
   align-items: center;

@@ -16,8 +16,7 @@ function ExtraApps() {
                     <i className="bi bi-code"></i>
                 </button>
                 <span>CodeLab</span>
-            </div>
-         
+            </div>       
 
 
         </section>

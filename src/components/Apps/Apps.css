@@ -12,6 +12,11 @@
     gap: 12px;
 }
 
+.apps-section,
+.extra-apps-section {
+  flex-shrink: 0;
+}
+
 .app-icon{
     display: flex;
     flex-direction: column;

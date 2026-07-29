@@ -8,7 +8,7 @@ function Monitor() {
     <div className="monitor">
       <div className="monitor__screen">
           <header className="home-header">
-            <h2>Exploring the intersection of code, mathematics and design.</h2>
+            <h2>Exploring the intersection of maths, coding, teaching and design.</h2>
           </header>
 
           <main className="home-screen">
