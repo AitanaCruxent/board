@@ -1,3 +1,7 @@
+
+/*------------------------------------
+MONITOR STYLES 
+-------------------------------------*/
 .monitor {
   width: 100%;
   height: 100%;
@@ -36,6 +40,10 @@
   flex-shrink: 0;
   background: #414141;
 }
+
+/* -------------------------------------
+HOME SCREEN STYLES 
+----------------------------------------*/
 
 .home-header {
   position: absolute;
@@ -95,15 +103,14 @@
 .search-container{
   display: flex;
   align-items: center;
-  gap:10px;
+  justify-content: center;
+  gap:15px;
 
   flex-shrink: 0;
 }
 
-
-
 .search-bar {
-  width: min(400px, 60%);
+  width: min(300px, 50%);
   margin-top: 0px;
   padding: 10px 16px;
   transform: translateX(-20px);
@@ -128,6 +135,30 @@
   color: #555;
 }
 
+/* -------------------------------------
+DRAWING CANVAS STYLES
+----------------------------------------*/
+
+.drawing-canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+}
+
+.drawing-canvas.active {
+  pointer-events: auto;
+  cursor: crosshair;
+
+   z-index: 5;
+}
+
+/* -------------------------------------
+BOTTOM NAVBAR STYLES 
+----------------------------------------*/
 .taskbar {
   position: absolute;
   bottom: 0px;
@@ -140,6 +171,8 @@
   gap: 20px;
   align-items: center;
   justify-content:center;
+
+  z-index: 10;
 }
 
 .taskbar .icon {

@@ -8,7 +8,7 @@ function ExtraApps() {
                 <button className="minigame">
                     <i className="bi bi-controller"></i>
                 </button>
-                <span>MiniGame</span>
+                <span>MiniGames</span>
             </div>
 
             <div className="app-icon">
