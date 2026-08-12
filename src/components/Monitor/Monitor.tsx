@@ -79,6 +79,22 @@ function Monitor() {
     setIsDrawing(false)
   }
 
+  // Function to clear the canvas and reset the drawing state
+  function handleRestart() {
+    const canvas = canvasRef.current
+
+    if (!canvas) return
+
+    const ctx = canvas.getContext("2d")
+
+    if (!ctx) return
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+    setActiveTool(null)
+    setIsDrawing(false)
+  }
+
   return (
     <div className="monitor">
       <div className="monitor__screen">
@@ -134,7 +150,9 @@ function Monitor() {
               <i className="bi bi-eraser-fill"></i>
             </div>
 
-            <div className="icon">
+            <div className="icon"
+              onClick={handleRestart}
+            >
               <i className="bi bi-arrow-clockwise"></i>
             </div>
           </nav>
