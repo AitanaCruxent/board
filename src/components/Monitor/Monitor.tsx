@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import './Monitor.css'
 import Clock from "../Clock/Clock"
 import Apps from "../Apps/Apps"
@@ -7,9 +7,23 @@ import ExtraApps from "../Apps/ExtraApps"
 function Monitor() {
 
   const [isDrawingMode, setIsDrawingMode] = useState(false);
+  const [isDrawing, setIsDrawing] = useState(false)
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-  function handlePointerDown() {
+  // Aligning the canvas size with the monitor screen size
+  useEffect(() => {
+    const canvas = canvasRef.current
+
+    if (!canvas) return
+
+    const rect = canvas.getBoundingClientRect()
+
+    canvas.width = rect.width
+    canvas.height = rect.height
+  }, [])
+
+  // Handling pointer events for when clicking the pointer
+  function handlePointerDown(event: React.PointerEvent<HTMLCanvasElement>) {
     const canvas = canvasRef.current
 
     if (!canvas) return
@@ -18,7 +32,41 @@ function Monitor() {
 
     if (!ctx) return
 
-    console.log("Canvas clicked", ctx)
+    const rect = canvas.getBoundingClientRect()
+
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+
+    ctx.beginPath()
+    ctx.moveTo(x, y)
+
+    setIsDrawing(true)
+  }
+
+  // Handling pointer events for when moving the pointer and drawing on the canvas
+  function handlePointerMove(event: React.PointerEvent<HTMLCanvasElement>) {
+    if (!isDrawing) return
+
+    const canvas = canvasRef.current
+
+    if (!canvas) return
+
+    const ctx = canvas.getContext("2d")
+
+    if (!ctx) return
+
+    const rect = canvas.getBoundingClientRect()
+
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+
+    ctx.lineTo(x, y)
+    ctx.stroke()
+  }
+
+  // Handling pointer events for when releasing the pointer  
+  function handlePointerUp() {
+    setIsDrawing(false)
   }
 
   return (
@@ -56,7 +104,10 @@ function Monitor() {
           <canvas
             ref={canvasRef}
             className={`drawing-canvas ${isDrawingMode ? "active" : ""}`}
-            onPointerDown={handlePointerDown}          
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove} 
+            onPointerUp={handlePointerUp}
+            onPointerLeave={handlePointerUp}         
           />
 
           <nav className="taskbar">
