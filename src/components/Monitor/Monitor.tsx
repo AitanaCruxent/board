@@ -6,8 +6,9 @@ import ExtraApps from "../Apps/ExtraApps"
 
 function Monitor() {
 
-  const [isDrawingMode, setIsDrawingMode] = useState(false);
-  const [isDrawing, setIsDrawing] = useState(false)
+  const [activeTool, setActiveTool] = useState<"pencil" | "eraser" | null>(null);
+
+  const [isDrawing, setIsDrawing] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   // Aligning the canvas size with the monitor screen size
@@ -60,6 +61,15 @@ function Monitor() {
     const x = event.clientX - rect.left
     const y = event.clientY - rect.top
 
+    if (activeTool === "eraser") {
+      ctx.globalCompositeOperation = "destination-out"
+      ctx.lineWidth = 25
+    } else {
+      ctx.globalCompositeOperation = "source-over"
+      ctx.strokeStyle = "black"
+      ctx.lineWidth = 3
+    }
+
     ctx.lineTo(x, y)
     ctx.stroke()
   }
@@ -103,7 +113,7 @@ function Monitor() {
 
           <canvas
             ref={canvasRef}
-            className={`drawing-canvas ${isDrawingMode ? "active" : ""}`}
+            className={`drawing-canvas ${activeTool ? "active" : ""}`}
             onPointerDown={handlePointerDown}
             onPointerMove={handlePointerMove} 
             onPointerUp={handlePointerUp}
@@ -111,19 +121,21 @@ function Monitor() {
           />
 
           <nav className="taskbar">
-            <div className="icon">
-              <i className="bi bi-house-door-fill"></i>
-            </div>
-
             <div
               className="icon"
-              onClick={() => setIsDrawingMode(!isDrawingMode)}
+              onClick={() => setActiveTool(activeTool === "pencil" ? null : "pencil")}
             >
               <i className="bi bi-pencil-fill"></i>
             </div>
 
+            <div className="icon"
+              onClick={() => setActiveTool(activeTool === "eraser" ? null : "eraser")}
+            >
+              <i className="bi bi-eraser-fill"></i>
+            </div>
+
             <div className="icon">
-              <i className="bi bi-dice-1-fill"></i>
+              <i className="bi bi-arrow-clockwise"></i>
             </div>
           </nav>
       </div>
