@@ -91,8 +91,12 @@ function Monitor() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
-    setActiveTool(null)
+    setActiveTool("pencil")
     setIsDrawing(false)
+  }
+
+  function handleExit(){
+    setActiveTool(null)
   }
 
   return (
@@ -154,6 +158,12 @@ function Monitor() {
               onClick={handleRestart}
             >
               <i className="bi bi-arrow-clockwise"></i>
+            </div>
+
+            <div className="icon"
+              onClick={handleExit}
+            >
+              <i className="bi bi-x-circle-fill"></i>
             </div>
           </nav>
       </div>
