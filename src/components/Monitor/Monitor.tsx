@@ -6,6 +6,7 @@ import ExtraApps from "../Apps/ExtraApps"
 
 function Monitor() {
 
+  // Board interactive drawing tool--------------------------------------------------------------------
   const [activeTool, setActiveTool] = useState<"pencil" | "eraser" | null>(null);
 
   const [isDrawing, setIsDrawing] = useState(false);
@@ -98,7 +99,7 @@ function Monitor() {
   function handleExit(){
     setActiveTool(null)
   }
-
+  
   return (
     <div className="monitor">
       <div className="monitor__screen">
