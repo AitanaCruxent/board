@@ -6,7 +6,7 @@ function JourneyWindow({ onClose }: JourneyWindowProps) {
   return (
     <div className="app-window">
       <div className="app-window__header">
-        <h2>Profile</h2>
+        <h2>Journey</h2>
 
         <button onClick={onClose}>
           ×

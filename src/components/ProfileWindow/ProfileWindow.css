@@ -9,7 +9,8 @@ Profile window popup styles
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 1000px;
+  width: 80%;
+  height: 80%;
   min-height: 350px;
 
   background: white;
@@ -30,4 +31,15 @@ Profile window popup styles
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
+}
+
+.app-window__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  background-color: #e5e4e4;
+  border-bottom: 1px solid #ccc;
 }
