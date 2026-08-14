@@ -1,0 +1,19 @@
+/*-----------------------------------
+Profile window popup styles
+-----------------------------------*/
+
+.app-window {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 1000px;
+  min-height: 350px;
+
+  background: white;
+  border-radius: 12px;
+
+  z-index: 100;
+}

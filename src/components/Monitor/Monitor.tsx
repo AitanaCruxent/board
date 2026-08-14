@@ -3,9 +3,21 @@ import './Monitor.css'
 import Clock from "../Clock/Clock"
 import Apps from "../Apps/Apps"
 import ExtraApps from "../Apps/ExtraApps"
+import ProfileWindow from "../ProfileWindow/ProfileWindow"
+
+type WindowType =
+  | "profile"
+  | "journey"
+  | "toolkit"
+  | "projects"
+  | "contact"
+  | null
+
 
 function Monitor() {
-
+  // Window popup rendering ---------------------------------------------------------------------------------------
+    const [openWindow, setOpenWindow] = useState<string | null>(null);
+  
   // Board interactive drawing tool--------------------------------------------------------------------
   const [activeTool, setActiveTool] = useState<"pencil" | "eraser" | null>(null);
 
@@ -100,9 +112,6 @@ function Monitor() {
     setActiveTool(null)
   }
   
-  // Window popup rendering ---------------------------------------------------------------------------------------
-    const [openWindow, setOpenWindow] = useState<string | null>(null);
-  
   return (
     <div className="monitor">
       <div className="monitor__screen">
@@ -135,23 +144,9 @@ function Monitor() {
             </div>
           </main>
 
-          // Window popup rendering ---------------------------------------------------------------------------------------
+          {/* Window popup rendering */}
           {openWindow === "profile" && (
-            <div className="app-window">
-              <div className="app-window__header">
-                <h2>Profile</h2>
-
-                <button onClick={() => setOpenWindow(null)}>
-                  ×
-                </button>
-              </div>
-
-              <div className="app-window__content">
-                <p>
-                  Hi! I'm Aitana, a developer with a background in mathematics.
-                </p>
-              </div>
-            </div>
+            <ProfileWindow onClose={() => setOpenWindow(null)}/>
           )}
 
           <canvas
