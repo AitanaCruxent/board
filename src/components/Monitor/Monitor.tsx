@@ -100,6 +100,9 @@ function Monitor() {
     setActiveTool(null)
   }
   
+  // Window popup rendering ---------------------------------------------------------------------------------------
+    const [openWindow, setOpenWindow] = useState<string | null>(null);
+  
   return (
     <div className="monitor">
       <div className="monitor__screen">
@@ -109,7 +112,7 @@ function Monitor() {
 
           <main className="home-screen">
             <Clock />
-            <Apps />
+            <Apps setOpenWindow={setOpenWindow} />
 
             <div className="search-container">
               <ExtraApps />
@@ -131,6 +134,25 @@ function Monitor() {
 
             </div>
           </main>
+
+          // Window popup rendering ---------------------------------------------------------------------------------------
+          {openWindow === "profile" && (
+            <div className="app-window">
+              <div className="app-window__header">
+                <h2>Profile</h2>
+
+                <button onClick={() => setOpenWindow(null)}>
+                  ×
+                </button>
+              </div>
+
+              <div className="app-window__content">
+                <p>
+                  Hi! I'm Aitana, a developer with a background in mathematics.
+                </p>
+              </div>
+            </div>
+          )}
 
           <canvas
             ref={canvasRef}

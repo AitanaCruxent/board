@@ -1,11 +1,11 @@
-import { useState } from "react";
 import "./Apps.css"
 
-function Apps() {
+type AppsProps = {
+  setOpenWindow: React.Dispatch<React.SetStateAction<string | null>>
+}
 
-    // Window popup rendering ---------------------------------------------------------------------------------------
-    const [openWindow, setOpenWindow] = useState<string | null>(null);
-  
+function Apps({ setOpenWindow }: AppsProps) {
+
     return (
         <section className="apps-section">
 
@@ -17,23 +17,6 @@ function Apps() {
                 </button>
                 <span>Profile</span>
             </div>
-
-            {openWindow ==="profile" && (
-                <div className="app-window">
-                    <div className="app-window__header">
-                        <h2>Profile</h2>
-                        <button onClick={() => setOpenWindow(null)}>
-                            ×
-                        </button>
-                    </div>
-
-                    <div className="app-window__content">
-                        <p>
-                            Hi! I'm Aitana, a developer with a background in mathematics.
-                        </p>
-                    </div>
-                </div>
-            )}
 
             <div className="app-icon">
                 <button className="journey">
