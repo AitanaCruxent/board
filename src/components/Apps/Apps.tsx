@@ -1,7 +1,9 @@
 import "./Apps.css"
 
+import type { WindowType } from "../../types/WindowType"
+
 type AppsProps = {
-  setOpenWindow: React.Dispatch<React.SetStateAction<string | null>>
+  setOpenWindow: React.Dispatch<React.SetStateAction<WindowType>>
 }
 
 function Apps({ setOpenWindow }: AppsProps) {
@@ -19,28 +21,36 @@ function Apps({ setOpenWindow }: AppsProps) {
             </div>
 
             <div className="app-icon">
-                <button className="journey">
+                <button className="journey"
+                onClick={() => setOpenWindow("journey")}
+                >
                     <i className="bi bi-backpack"></i>
                 </button>
                 <span>Journey</span>
             </div>
 
             <div className="app-icon">
-                <button className="tools">
+                <button className="tools"
+                    onClick={() => setOpenWindow("toolkit")}
+                >
                     <i className="bi bi-tools"></i>
                 </button>
                 <span>ToolKit</span>
             </div>
 
             <div className="app-icon">
-                <button className="projects">
+                <button className="projects"
+                    onClick={() => setOpenWindow("projects")}
+                >
                     <i className="bi bi-journal-code"></i>
                 </button>
                 <span>Projects</span>
             </div>
 
             <div className="app-icon">
-                <button className="contact">
+                <button className="contact"
+                    onClick={() => setOpenWindow("contact")}
+                >
                     <i className="bi bi-phone"></i>
                 </button>
                 <span>Contact</span>

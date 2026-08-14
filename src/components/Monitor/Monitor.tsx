@@ -4,19 +4,13 @@ import Clock from "../Clock/Clock"
 import Apps from "../Apps/Apps"
 import ExtraApps from "../Apps/ExtraApps"
 import ProfileWindow from "../ProfileWindow/ProfileWindow"
+import JourneyWindow from "../JourneyWindow/JourneyWindow"
 
-type WindowType =
-  | "profile"
-  | "journey"
-  | "toolkit"
-  | "projects"
-  | "contact"
-  | null
-
+import type { WindowType } from "../../types/WindowType"
 
 function Monitor() {
   // Window popup rendering ---------------------------------------------------------------------------------------
-    const [openWindow, setOpenWindow] = useState<string | null>(null);
+    const [openWindow, setOpenWindow] = useState<WindowType>(null);
   
   // Board interactive drawing tool--------------------------------------------------------------------
   const [activeTool, setActiveTool] = useState<"pencil" | "eraser" | null>(null);
@@ -148,6 +142,12 @@ function Monitor() {
           {openWindow === "profile" && (
             <ProfileWindow onClose={() => setOpenWindow(null)}/>
           )}
+
+          {openWindow === "journey" && (
+            <JourneyWindow onClose={() => setOpenWindow(null)}/>
+          )}
+
+          /* Missing Toolkit, Projects, Contact... */
 
           <canvas
             ref={canvasRef}
