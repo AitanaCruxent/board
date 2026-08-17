@@ -24,8 +24,8 @@ MONITOR STYLES
   box-sizing: border-box;
 
   background:
-    radial-gradient(circle at top left, rgb(218, 223, 230), transparent 80%),
-    radial-gradient(circle at bottom right, rgba(248, 87, 24, 0.74), transparent 70%),
+    radial-gradient(circle at top left, rgb(10, 16, 82), transparent 80%),
+    radial-gradient(circle at bottom right, rgba(208, 77, 26, 0.74), transparent 70%),
     linear-gradient(135deg, #aa57d1 0%, #220344 100%, #4d2572 100%);
   box-shadow:
   0 10px 30px rgba(0, 0, 0, 0.25),

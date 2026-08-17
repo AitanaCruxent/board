@@ -73,7 +73,7 @@ function Monitor() {
       ctx.lineWidth = 25
     } else {
       ctx.globalCompositeOperation = "source-over"
-      ctx.strokeStyle = "black"
+      ctx.strokeStyle = "white"
       ctx.lineWidth = 3
     }
 
@@ -147,7 +147,7 @@ function Monitor() {
             <JourneyWindow onClose={() => setOpenWindow(null)}/>
           )}
 
-          /* Missing Toolkit, Projects, Contact... */
+          {/* Missing Toolkit, Projects, Contact... */}
 
           <canvas
             ref={canvasRef}
