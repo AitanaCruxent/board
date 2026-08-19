@@ -49,6 +49,7 @@ HOME SCREEN STYLES
   position: absolute;
   top: 25px;
   right: 30px;
+  padding-bottom: 10px;
 
   display: flex;
   flex-direction: column;
@@ -66,9 +67,14 @@ HOME SCREEN STYLES
   font-size: 20px;
 }
 
-@media (max-height: 530px) {
+@media (max-height: 580px) {
+  .home-header {
+    position: fixed;
+    margin-bottom: 20px;
+  }
+
   .home-header h2{
-    font-size: 13px;
+    font-size: 15px;
     width: 30%;
   }
 }
