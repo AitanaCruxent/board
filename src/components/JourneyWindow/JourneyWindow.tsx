@@ -1,3 +1,5 @@
+import "../ProfileWindow/CommonWindow.css"
+
 type JourneyWindowProps = {
   onClose: () => void
 }
@@ -8,8 +10,8 @@ function JourneyWindow({ onClose }: JourneyWindowProps) {
       <div className="app-window__header">
         <h2>Journey</h2>
 
-        <button onClick={onClose}>
-          ×
+        <button className="close-button" onClick={onClose}>
+          <i className="bi bi-x"></i>
         </button>
       </div>
 

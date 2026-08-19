@@ -1,3 +1,4 @@
+import "./CommonWindow.css"
 import "./ProfileWindow.css"
 
 type ProfileWindowProps = {
@@ -10,7 +11,7 @@ function ProfileWindow({ onClose }: ProfileWindowProps) {
       <div className="app-window__header">
         <h2>Profile</h2>
 
-        <button onClick={onClose}>
+        <button className="close-button" onClick={onClose}>
           ×
         </button>
       </div>

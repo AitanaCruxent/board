@@ -32,14 +32,3 @@ Profile window popup styles
     transform: translate(-50%, -50%) scale(1);
   }
 }
-
-.app-window__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 5px 10px;
-
-  background-color: #e5e4e4;
-  border-bottom: 1px solid #ccc;
-}

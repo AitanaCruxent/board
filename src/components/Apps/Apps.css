@@ -51,25 +51,8 @@
 
 }
 
-.profile {
+.main-button {
     background-color: rgba(254, 252, 252, 0.299);
-}
-
-.journey {
-    background-color: rgba(69, 194, 248, 0.281);
-}
-
-
-.tools {
-    background-color: rgba(186, 255, 184, 0.397);
-}
-
-.projects {
-    background-color: rgb(172, 56, 172);
-}
-
-.contact {
-    background-color: rgba(223, 223, 77, 0.826);
 }
 
 .minigame {
