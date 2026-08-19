@@ -1,15 +1,15 @@
 .apps-section {
-    padding: 20px;
+    padding: 25px;
     display: flex;
-    gap: 25px;
-    background-color: rgba(0, 0, 0, 0.123);
+    gap: 45px;
+    background-color: rgba(253, 252, 252, 0.091);
     border-radius: 10px;
 }
 
 .extra-apps-section {
     padding: 20px;
     display: flex;
-    gap: 12px;
+    gap: 30px;
 }
 
 .apps-section,
@@ -41,7 +41,7 @@
 
 .app-icon i {
     color: white;
-    font-size: 30px;
+    font-size: 45px;
 }
 
 .app-icon span {
@@ -52,16 +52,16 @@
 }
 
 .profile {
-    background-color: rgba(234, 81, 81, 0.858);
+    background-color: rgba(254, 252, 252, 0.299);
 }
 
 .journey {
-    background-color: rgba(90, 90, 207, 0.637);
+    background-color: rgba(69, 194, 248, 0.281);
 }
 
 
 .tools {
-    background-color: rgba(94, 207, 90, 0.758);
+    background-color: rgba(186, 255, 184, 0.397);
 }
 
 .projects {

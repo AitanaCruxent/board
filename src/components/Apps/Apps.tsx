@@ -21,7 +21,7 @@ function Apps({ setOpenWindow }: AppsProps) {
             </div>
 
             <div className="app-icon">
-                <button className="journey"
+                <button className="profile"
                 onClick={() => setOpenWindow("journey")}
                 >
                     <i className="bi bi-backpack"></i>
@@ -30,7 +30,7 @@ function Apps({ setOpenWindow }: AppsProps) {
             </div>
 
             <div className="app-icon">
-                <button className="tools"
+                <button className="profile"
                     onClick={() => setOpenWindow("toolkit")}
                 >
                     <i className="bi bi-tools"></i>
@@ -39,7 +39,7 @@ function Apps({ setOpenWindow }: AppsProps) {
             </div>
 
             <div className="app-icon">
-                <button className="projects"
+                <button className="profile"
                     onClick={() => setOpenWindow("projects")}
                 >
                     <i className="bi bi-journal-code"></i>
@@ -48,7 +48,7 @@ function Apps({ setOpenWindow }: AppsProps) {
             </div>
 
             <div className="app-icon">
-                <button className="contact"
+                <button className="profile"
                     onClick={() => setOpenWindow("contact")}
                 >
                     <i className="bi bi-phone"></i>

@@ -68,7 +68,7 @@ HOME SCREEN STYLES
 
 @media (max-height: 530px) {
   .home-header h2{
-    font-size: 15px;
+    font-size: 13px;
     width: 30%;
   }
 }
@@ -104,13 +104,13 @@ HOME SCREEN STYLES
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:10px;
+  gap:30px;
 
   flex-shrink: 0;
 }
 
 .search-bar {
-  width: min(300px, 50%);
+  width: min(350px, 60%);
   margin-top: 0px;
   padding: 10px 16px;
   transform: translateX(-20px);

@@ -17,7 +17,9 @@ function ProfileWindow({ onClose }: ProfileWindowProps) {
 
       <div className="app-window__content">
         <p>
-          Hi! I'm Aitana, a developer with a background in mathematics.
+          Idea for this page: Start by writing hi, then delete and write the presentation as if I waswriting on the board. 
+          Maybe it would be cool that the hi is written by me with the ipad (is it possible?) and the rest with a font that 
+          looks like handwritten.
         </p>
       </div>
     </div>
